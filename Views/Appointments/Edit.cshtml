@@ -1,10 +1,10 @@
 ﻿@model ao188116_MIS4200.Models.Appointment
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Edit Appointment";
 }
 
-<h2>Edit</h2>
+<h2>Edit Appointment Details</h2>
 
 
 @using (Html.BeginForm())
@@ -36,7 +36,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.petID, "petID", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("petID", null, htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("petID", null, htmlAttributes: new { @class = "form-control"})
                 @Html.ValidationMessageFor(model => model.petID, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -58,7 +58,7 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List of Appointments", "Index")
 </div>
 
 @section Scripts {

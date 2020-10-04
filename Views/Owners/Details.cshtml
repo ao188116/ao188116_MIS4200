@@ -1,29 +1,21 @@
 ﻿@model ao188116_MIS4200.Models.Owner
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Owner Details";
 }
 
-<h2>Details</h2>
+<h2>Owner Details</h2>
 
 <div>
     <h4>Owner</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.firstName)
+            Owner Name
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.firstName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.lastName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.lastName)
+            @Html.DisplayFor(model => model.fullName)
         </dd>
 
         <dt>
@@ -53,6 +45,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ownerID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Edit Owner Details", "Edit", new { id = Model.ownerID }) |
+    @Html.ActionLink("Back to List of Owners", "Index")
 </p>

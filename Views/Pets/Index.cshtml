@@ -9,10 +9,10 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table class="table table-striped">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Owner.firstName)
+            Owner Name
         </th>
         <th>
             @Html.DisplayNameFor(model => model.name)
@@ -29,7 +29,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Owner.firstName)
+            @Html.DisplayFor(modelItem => item.Owner.fullName)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.name)

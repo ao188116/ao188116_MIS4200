@@ -40,7 +40,7 @@ namespace ao188116_MIS4200.Controllers
         // GET: Pets/Create
         public ActionResult Create()
         {
-            ViewBag.OwnerID = new SelectList(db.Owners, "ownerID", "firstName");
+            ViewBag.OwnerID = new SelectList(db.Owners, "ownerID", "fullName");
             return View();
         }
 
@@ -58,7 +58,7 @@ namespace ao188116_MIS4200.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.OwnerID = new SelectList(db.Owners, "ownerID", "firstName", pet.OwnerID);
+            ViewBag.OwnerID = new SelectList(db.Owners, "ownerID", "fullName", pet.OwnerID);
             return View(pet);
         }
 
@@ -74,7 +74,7 @@ namespace ao188116_MIS4200.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.OwnerID = new SelectList(db.Owners, "ownerID", "firstName", pet.OwnerID);
+            ViewBag.OwnerID = new SelectList(db.Owners, "ownerID", "fullName", pet.OwnerID);
             return View(pet);
         }
 
@@ -91,7 +91,7 @@ namespace ao188116_MIS4200.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.OwnerID = new SelectList(db.Owners, "ownerID", "firstName", pet.OwnerID);
+            ViewBag.OwnerID = new SelectList(db.Owners, "ownerID", "fullName", pet.OwnerID);
             return View(pet);
         }
 
