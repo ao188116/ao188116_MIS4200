@@ -40,8 +40,8 @@ namespace ao188116_MIS4200.Controllers
         // GET: Appointments/Create
         public ActionResult Create()
         {
-            ViewBag.petID = new SelectList(db.Pets, "Pet Name", "name");
-            ViewBag.VetID = new SelectList(db.Vets, "Vet Name", "vFullName");
+            ViewBag.petID = new SelectList(db.Pets, "petID", "name");
+            ViewBag.VetID = new SelectList(db.Vets, "vetID", "vFullName");
             return View();
         }
 
@@ -59,8 +59,8 @@ namespace ao188116_MIS4200.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.petID = new SelectList(db.Pets, "Pet Name", "name", appointment.petID);
-            ViewBag.VetID = new SelectList(db.Vets, "Vet Name", "vFullName", appointment.VetID);
+            ViewBag.petID = new SelectList(db.Pets, "petID", "name", appointment.petID);
+            ViewBag.VetID = new SelectList(db.Vets, "vetID", "vFullName", appointment.VetID);
             return View(appointment);
         }
 
@@ -76,8 +76,8 @@ namespace ao188116_MIS4200.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.petID = new SelectList(db.Pets, "Pet Name", "name", appointment.petID);
-            ViewBag.VetID = new SelectList(db.Vets, "Vet Name", "vFullName", appointment.VetID);
+            ViewBag.petID = new SelectList(db.Pets, "petID", "name", appointment.petID);
+            ViewBag.VetID = new SelectList(db.Vets, "vetID", "vFullName", appointment.VetID);
             return View(appointment);
         }
 
@@ -94,8 +94,8 @@ namespace ao188116_MIS4200.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.petID = new SelectList(db.Pets, "Pet Name", "name", appointment.petID);
-            ViewBag.VetID = new SelectList(db.Vets, "Vet Name", "vfullName", appointment.VetID);
+            ViewBag.petID = new SelectList(db.Pets, "petID", "name", appointment.petID);
+            ViewBag.VetID = new SelectList(db.Vets, "vetID", "vfullName", appointment.VetID);
             return View(appointment);
         }
 

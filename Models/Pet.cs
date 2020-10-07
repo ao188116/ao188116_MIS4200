@@ -12,6 +12,7 @@ namespace ao188116_MIS4200.Models
         [Key]
 
         public int petID { get; set; }
+
         [Display (Name = "Pet Name")]
         [Required (ErrorMessage = "Pet Name is required")]
         [StringLength(25)]
